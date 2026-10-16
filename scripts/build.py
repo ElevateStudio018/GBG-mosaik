@@ -343,9 +343,6 @@ FAQ = [
 
 def index():
     slides = "".join(f'<div class="slide{" on" if i == 0 else ""}">{img(n, a, lazy=i > 0)}</div>' for i, (n, a) in enumerate(HERO_SLIDES))
-    areas = "".join(f'<li><a href="{s}.html"><b>{t}</b>{I_ARROW}</a></li>'
-                    for s, t in [("platsgjuten-terrazzo", "Platsgjuten terrazzo"), ("terrazzoplattor", "Plattor och fasad"),
-                                 ("renovering", "Renovering"), ("torkzoner", "Torkzoner och taktila")])
     trust = [(I_CLOCK, f"Sedan {C.FOUNDED}", "Grundat av Stig Hofling"), (I_DROP, f"{N_COLORS} egna kulörer", "Platsgjuten kollektion"),
              (I_LAYERS, "Platsgjutet och prefab", f"{N_TILES} plattkulörer"), (I_USERS, "Stora som små projekt", "Från idé till färdigt golv")]
     trust_html = "".join(f"<li>{i}<div><b>{a}</b><span>{b}</span></div></li>" for i, a, b in trust)
@@ -363,7 +360,6 @@ def index():
     <p class="hero-lead">Vi gjuter, slipar och renoverar terrazzogolv, trappor och ytor – och följer er från idé till färdigt, unikt golv.</p>
     <div class="btns">{samples_btn("btn-accent")}<a class="btn btn-light" href="platsgjuten-terrazzo.html#kollektion">Se färgkollektionen</a></div>
   </div>
-  <ul class="areas wrap">{areas}</ul>
 </section>
 
 <section class="trust" aria-label="I korthet"><ul class="wrap trust-in">{trust_html}</ul></section>
